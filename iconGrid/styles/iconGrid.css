@@ -1,0 +1,140 @@
+body {
+  color: #47A3DA;
+  text-align: center; }
+
+a {
+  text-decoration: none;
+  color: #47A3DA; }
+  a:hover {
+    cursor: pointer;
+    cursor: hand;
+    color: #71b8e3; }
+
+h1, h2, h3, p {
+  padding: 0; }
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  header .titles {
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+    header .titles h3 {
+      letter-spacing: 7px;
+      font-size: 22px;
+      margin-top: 60px; }
+      header .titles h3 a {
+        position: relative; }
+        header .titles h3 a i {
+          position: absolute;
+          top: -5px;
+          font-size: 20px; }
+    header .titles h1 {
+      font-weight: normal;
+      font-size: 50px;
+      margin: 0; }
+  header .icon-container {
+    margin: 25px 0; }
+    header .icon-container a {
+      margin: 0 5px;
+      font-size: 20px; }
+
+main .item .shoe, main .item .skull, main .item .milk, main .item .icecream, main .item .glasses, main .item .drum {
+  width: 150px;
+  height: 150px;
+  margin: 50px 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap; }
+  main .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    height: 400px;
+    border-bottom: 1px solid #E6E6E6; }
+    main .item .meta {
+      display: flex;
+      flex-direction: column; }
+    main .item:hover {
+      background: #47A3DA;
+      color: #fff; }
+      main .item:hover .meta h1 {
+        order: 0; }
+      main .item:hover .meta .divider {
+        background: #fff;
+        order: 1; }
+      main .item:hover .meta h3 {
+        display: inline;
+        order: 2; }
+    main .item .shoe {
+      background-image: url("../images/Shoe_Blue.png"); }
+    main .item .skull {
+      background-image: url("../images/skull.png"); }
+    main .item .milk {
+      background-image: url("../images/milk_blue.png"); }
+    main .item .icecream {
+      background-image: url("../images/icecream_blue.png"); }
+    main .item .glasses {
+      background-image: url("../images/glasses.png"); }
+    main .item .drum {
+      background-image: url("../images/drum_blue.png"); }
+    main .item .meta {
+      display: flex;
+      align-items: center;
+      flex-direction: column; }
+      main .item .meta h3 {
+        display: none; }
+      main .item .meta .divider {
+        width: 150px;
+        height: 5px;
+        background-color: #47A3DA; }
+
+@media (min-width: 670px) {
+  header {
+    margin-bottom: 50px; }
+    header h1 {
+      font-size: 40px; }
+
+  main {
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 0 auto; }
+    main .item {
+      width: 40%; }
+      main .item:nth-child(2n+1) {
+        border-right: 1px solid #E6E6E6; } }
+@media (min-width: 880px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: 0 auto 50px auto; }
+    header .titles {
+      text-align: left; }
+      header .titles h3 {
+        font-size: 12px; }
+        header .titles h3 a i {
+          font-size: 10px; }
+      header .titles h1 {
+        font-size: 25px; }
+
+  main {
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto; }
+    main .item {
+      width: 30%;
+      border-right: 1px solid #E6E6E6; }
+      main .item:nth-child(3n) {
+        border-right: 0; } }
+
+/*# sourceMappingURL=iconGrid.css.map */

@@ -1,0 +1,165 @@
+@import 'variables';
+
+body {
+  color: $primary-color;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+  &:hover {
+    cursor: pointer;
+    cursor: hand;
+    color: lighten($primary-color, 10%);
+  }
+}
+
+h1,h2,h3,p {
+  padding: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .titles {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    // justify-content: center;
+    h3 {
+      letter-spacing: 7px;
+      font-size: 22px;
+      margin-top: 60px;
+      a {
+        position: relative;
+        i {
+          position: absolute;
+          top: -5px;
+          font-size: 20px;
+        }
+      }
+    }
+    h1 {
+      font-weight: normal;
+      font-size: 50px;
+      margin: 0;
+    }
+  }
+  .icon-container {
+    margin: 25px 0;
+    a {
+      margin: 0 5px;
+      font-size: 20px;
+    }
+  }
+}
+
+// header h3 i {
+//   font-size: 10px;
+// }
+.tab-section {
+  margin: 50px 0;
+  z-index: 0;
+}
+.tabs-container {
+  display: flex;
+  min-height: 75px;
+  .tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: $unselected-color;
+    label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      border-top: 1px solid $unselected-color;
+      border-bottom: 1px solid $primary-color;
+      border-left: 1px solid $unselected-color;
+      box-sizing: border-box;
+      z-index: 1;
+      .desktop-only {
+        display: none;
+      }
+    }
+    &:hover {
+      color: $primary-color;
+    }
+    & [type=radio] {
+      display: none;
+      // TODO Attempt to make a parent selector for this using "<"
+      &:checked ~ label {
+        border-top: 3px solid $primary-color;
+        border-bottom: 0;
+        border-left: 1px solid $primary-color;
+        border-right: 1px solid $primary-color;
+        color: $primary-color;
+      }
+    } // End radio
+    &:first-child [type=radio]:checked ~ label {
+      border-left: 0;
+    }
+    &:last-child [type=radio]:checked ~ label {
+      border-right: 0;
+    }
+  } // End .tab
+}
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto;
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 250px;
+    background: $primary-color;
+    margin: 0 auto;
+    .icon-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $white;
+      width: 175px;
+      height: 175px;
+      border: 0;
+      border-radius: 50%;
+      img {
+        max-width: 60%;
+        height: auto;
+      }
+    }
+  } // End image-container
+  .text-container {
+    display: flex;
+    flex-direction: column;
+  }
+  p {
+    max-width: 100%;
+    font-size: 20px;
+  }
+}
+
+footer {
+  margin: 200px 0 50px 0;
+  font-size: 25px;
+  color: $unselected-color;
+  a {
+    color: $primary-color;
+  }
+}
+
+@import 'tablet', 'desktop';

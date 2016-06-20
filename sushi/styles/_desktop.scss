@@ -1,0 +1,57 @@
+@media (min-width: 840px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: 0 auto;
+    .titles {
+      text-align: left;
+      h3 {
+        font-size: 12px;
+        a {
+          i {
+            font-size: 10px;
+          }
+        }
+      }
+      h1 {
+        font-size: 25px;
+      }
+    }
+    // .icon-container i {
+    //   font-size: 15px;
+    // }
+  }
+  .tabs-container {
+    min-height: 40px;
+    width: 50%;
+    .tab {
+      margin: 0 3px;
+      label {
+        padding: 0 15px;
+        .desktop-only {
+          margin-left: 10px;
+          display: inline;
+        }
+      }
+    }
+  }
+  .tab-content {
+    flex-direction: row;
+    section {
+      flex-direction: column;
+      margin: 0 20px;
+      flex: 1;
+      .image-container {
+        width: 100%;
+      }
+      .text-container {
+        width: 100%;
+        h2 {
+          margin-top: 15px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
