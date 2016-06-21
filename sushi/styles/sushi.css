@@ -1,6 +1,8 @@
 body {
   color: #47A3DA;
-  text-align: center; }
+  text-align: center;
+  position: relative;
+  height: 100%; }
 
 a {
   text-decoration: none;
@@ -43,7 +45,8 @@ header {
 
 .tab-section {
   margin: 50px 0;
-  z-index: 0; }
+  z-index: 0;
+  position: relative; }
 
 .tabs-container {
   display: flex;
@@ -76,30 +79,31 @@ header {
         border-bottom: 0;
         border-left: 1px solid #47A3DA;
         border-right: 1px solid #47A3DA;
-        color: #47A3DA; }
+        color: #47A3DA;
+        z-index: 2; }
     .tabs-container .tab:first-child [type=radio]:checked ~ label {
       border-left: 0; }
     .tabs-container .tab:last-child [type=radio]:checked ~ label {
       border-right: 0; }
 
-.tab-content {
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 80%;
   margin: 0 auto; }
-  .tab-content section {
+  .content section {
     display: flex;
     flex-direction: column; }
-  .tab-content .image-container {
+  .content .image-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
     height: 250px;
     background: #47A3DA;
     margin: 0 auto; }
-    .tab-content .image-container .icon-container {
+    .content .image-container .icon-container {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -108,20 +112,34 @@ header {
       height: 175px;
       border: 0;
       border-radius: 50%; }
-      .tab-content .image-container .icon-container img {
+      .content .image-container .icon-container img {
         max-width: 60%;
         height: auto; }
-  .tab-content .text-container {
+  .content .text-container {
     display: flex;
     flex-direction: column; }
-  .tab-content p {
+  .content p {
     max-width: 100%;
     font-size: 20px; }
+
+.content {
+  position: absolute;
+  top: 125px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: none; }
+
+[type=radio]:checked ~ label ~ .content {
+  display: flex; }
 
 footer {
   margin: 200px 0 50px 0;
   font-size: 25px;
-  color: #BECAD1; }
+  color: #BECAD1;
+  position: absolute;
+  width: 100%;
+  text-align: center; }
   footer a {
     color: #47A3DA; }
 
@@ -150,25 +168,25 @@ footer {
       .tabs-container .tab:last-child [type=radio]:checked ~ label {
         border-right: 1px solid #47A3DA; }
 
-  .tab-content {
+  .content {
     align-items: flex-start; }
-    .tab-content section {
+    .content section {
       flex-direction: row;
       margin-bottom: 25px; }
-      .tab-content section .image-container {
+      .content section .image-container {
         max-width: 300px;
         height: 150px;
         margin: 0; }
-        .tab-content section .image-container .icon-container {
+        .content section .image-container .icon-container {
           width: 75px;
           height: 75px; }
-      .tab-content section .text-container {
+      .content section .text-container {
         width: 70%;
         text-align: left;
         margin-left: 10px; }
-        .tab-content section .text-container h2 {
+        .content section .text-container h2 {
           margin: 0; }
-        .tab-content section .text-container p {
+        .content section .text-container p {
           font-size: 15px; }
 
   footer {
@@ -200,17 +218,20 @@ footer {
           margin-left: 10px;
           display: inline; }
 
-  .tab-content {
-    flex-direction: row; }
-    .tab-content section {
+  .content {
+    flex-direction: column; }
+    .content .wrapper {
+      display: flex;
+      flex-direction: row; }
+    .content section {
       flex-direction: column;
       margin: 0 20px;
       flex: 1; }
-      .tab-content section .image-container {
+      .content section .image-container {
         width: 100%; }
-      .tab-content section .text-container {
+      .content section .text-container {
         width: 100%; }
-        .tab-content section .text-container h2 {
+        .content section .text-container h2 {
           margin-top: 15px;
           font-size: 20px; } }
 

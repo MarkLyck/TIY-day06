@@ -36,8 +36,12 @@
       }
     }
   }
-  .tab-content {
-    flex-direction: row;
+  .content {
+    flex-direction: column;
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+    }
     section {
       flex-direction: column;
       margin: 0 20px;
@@ -54,4 +58,7 @@
       }
     }
   }
+  // footer {
+  //   bottom: 200px;
+  // }
 }
