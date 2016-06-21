@@ -1,5 +1,16 @@
 @import 'variables';
 
+// @font-face {
+// 	font-family: 'anyoldicon';
+// 	src:url('../fonts/anyoldicon/anyoldicon.eot');
+// 	src:url('../fonts/anyoldicon/anyoldicon.eot?#iefix') format('embedded-opentype'),
+// 		url('../fonts/anyoldicon/anyoldicon.woff') format('woff'),
+// 		url('../fonts/anyoldicon/anyoldicon.ttf') format('truetype'),
+// 		url('../fonts/anyoldicon/anyoldicon.svg#anyoldicon') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
 body {
   color: $primary-color;
   text-align: center;
@@ -77,6 +88,9 @@ main {
     width: 85%;
     height: 400px;
     border-bottom: 1px solid #E6E6E6;
+    -webkit-transition: background 0.3s;
+  	   -moz-transition: background 0.3s;
+  	        transition: background 0.3s;
     .meta {
       display: flex;
       flex-direction: column;
@@ -84,6 +98,9 @@ main {
     &:hover {
       background: $primary-color;
       color: #fff;
+      div:first-child {
+        margin-bottom: 0px;
+      }
       .meta {
         h1 {
           order: 0;
@@ -101,6 +118,18 @@ main {
     .shoe {
       background-image: url('../images/Shoe_Blue.png');
       @extend %image-default;
+      // font-family: 'anyoldicon';
+      // font-size: 14em;
+    	// speak: none;
+    	// font-style: normal;
+    	// font-weight: normal;
+    	// font-variant: normal;
+    	// text-transform: none;
+    	// line-height: 1;
+    	// -webkit-font-smoothing: antialiased;
+      // &::before {
+      //   content: "\e000";
+      // }
     }
     .skull {
       background-image: url('../images/skull.png');
