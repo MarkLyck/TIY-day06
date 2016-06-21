@@ -70,8 +70,6 @@ header {
       z-index: 1; }
       .tabs-container .tab label .desktop-only {
         display: none; }
-    .tabs-container .tab:hover {
-      color: #47A3DA; }
     .tabs-container .tab [type=radio] {
       display: none; }
       .tabs-container .tab [type=radio]:checked ~ label {
@@ -95,6 +93,8 @@ header {
   .content section {
     display: flex;
     flex-direction: column; }
+    .content section:hover {
+      color: #47A3DA; }
   .content .image-container {
     display: flex;
     justify-content: center;

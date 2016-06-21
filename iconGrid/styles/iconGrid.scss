@@ -101,6 +101,9 @@ main {
       div:first-child {
         margin-bottom: 0px;
       }
+      .skull {
+        background-image: url('../images/skull.png');
+      }
       .meta {
         h1 {
           order: 0;
@@ -151,6 +154,7 @@ main {
       background-image: url('../images/drum_blue.png');
       @extend %image-default;
     }
+
     .meta {
       display: flex;
       align-items: center;

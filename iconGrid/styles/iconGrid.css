@@ -72,6 +72,8 @@ main {
       color: #fff; }
       main .item:hover div:first-child {
         margin-bottom: 0px; }
+      main .item:hover .skull {
+        background-image: url("../images/skull.png"); }
       main .item:hover .meta h1 {
         order: 0; }
       main .item:hover .meta .divider {

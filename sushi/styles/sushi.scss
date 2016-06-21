@@ -58,9 +58,6 @@ header {
   }
 }
 
-// header h3 i {
-//   font-size: 10px;
-// }
 .tab-section {
   margin: 50px 0;
   z-index: 0;
@@ -76,7 +73,6 @@ header {
     align-items: center;
     width: 100%;
     color: $unselected-color;
-    // position: relative;
     label {
       display: flex;
       justify-content: center;
@@ -91,9 +87,6 @@ header {
       .desktop-only {
         display: none;
       }
-    }
-    &:hover {
-      color: $primary-color;
     }
     & [type=radio] {
       display: none;
@@ -116,11 +109,6 @@ header {
   } // End .tab
 }
 
-// .tab-section < .tabs-container < .tab:hover {
-//   display: none;
-// }
-
-
 
 .content {
   display: flex;
@@ -131,6 +119,9 @@ header {
   section {
     display: flex;
     flex-direction: column;
+    &:hover {
+      color: $primary-color;
+    }
   }
   .image-container {
     display: flex;
@@ -170,7 +161,7 @@ header {
 
 
 
-
+// This is temporarily down here becaus I was trying to get the footer to work with repeating it.
 .content {
   position: absolute;
   top: 125px;
@@ -178,7 +169,6 @@ header {
   right: 0;
   width: 100%;
   display: none;
-  // margin-bottom: 200px;
 }
 
 [type=radio]:checked ~ label ~ .content {
