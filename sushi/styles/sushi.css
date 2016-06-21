@@ -68,6 +68,8 @@ header {
       border-left: 1px solid #BECAD1;
       box-sizing: border-box;
       z-index: 1; }
+      .tabs-container .tab label:hover {
+        color: #47A3DA; }
       .tabs-container .tab label .desktop-only {
         display: none; }
     .tabs-container .tab [type=radio] {

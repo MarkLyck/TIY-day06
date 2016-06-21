@@ -84,6 +84,9 @@ header {
       border-left: 1px solid $unselected-color;
       box-sizing: border-box;
       z-index: 1;
+      &:hover {
+        color: $primary-color;
+      }
       .desktop-only {
         display: none;
       }
